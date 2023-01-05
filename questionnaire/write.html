@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>问卷填写页面</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+  	<header class="headerpage header"></header>
+    <section>
+        <div class="detail">
+            <div class="edit-header" id="edit-header">
+                <span id="page_subject">标题</span>
+            </div>
+            <div id="content_area">
+        	</div>
+        	<input type="button" class="submit-qn" value="提交问卷" onclick="myQuestionaire.write.saveObj()" />
+        </div>
+    </section>
+    <script type="text/javascript" src="script/Questionaire.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			/*公共部分
+			 * 导航栏
+			 */
+			$(".headerpage").load("header.html");
+		});
+	</script>
+</body>
+
+</html>

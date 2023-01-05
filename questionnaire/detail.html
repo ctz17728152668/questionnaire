@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>问卷详情页面</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/detail.css">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<script src="script/echarts.common.min.js"></script>
+</head>
+
+<body>
+	  <header class="headerpage header"></header>
+	<section>
+		<div class="detail">
+			<div class="detail-header">
+				<div>
+					<a href="index.html">
+						<div class="detail-back">
+							<img src="images/返回按钮.png" alt="back" />
+							<span>返回</span>
+						</div>
+					</a>
+				</div>
+				<div>
+					<h2 id="page_subject">这里是标题</h2>
+					<p>此统计分析只包含完整回收的数据</p>
+				</div>
+			</div>
+			<div class="detail-boxes" id="content_area">
+			</div>
+			<div>
+				<a href="index.html">
+					<div class="detail-bottom">
+						<span>返回</span>
+						<img src="images/返回按钮.png" alt="back" />
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="script/Questionaire.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			/*公共部分
+			 * 导航栏
+			 */
+			$(".headerpage").load("header.html");
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>问卷编辑页面</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <!-- <script src="script/Calendar.js"></script> -->
+   <header class="headerpage header"></header>
+    <section>
+        <div class="edit">
+            <div class="edit-header" >
+                <input type="text" value="问卷标题" id="page_subject"/>
+            </div>
+            <div class="edit-qbox" id="edit-qbox">
+            </div>
+            <div class="edit-body">
+                <ul class="hide">
+                    <li onClick="myQuestionaire.edit.newRadio(event)"><span>&#9744单选</span></li>
+                    <li onClick="myQuestionaire.edit.newCheckbox(event)"><span>&#9745多选</span></li>
+                    <li onClick="myQuestionaire.edit.newTextarea(event)"><img src="images/text.png" alt="" /><span>文本题</span></li>
+                </ul>
+                <div onClick='myQuestionaire.edit.toggleShowBtn(event)'><img src="images/新增.png">+添加问题</div>
+            </div>
+            <div class="edit-footer">
+                <div>
+                    <span>问卷截至日期</span>
+                    <!-- class="date" -->
+                    <input type="date"  data-calendar/>
+                </div>
+                <div>
+                    <input type="button" value="保存问卷" onclick="myQuestionaire.edit.save()" />
+                    <input type="button" value="发布问卷" onClick="myQuestionaire.edit.confirmPost()" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="maskControl" class="hide">
+        <div class="mask"></div>
+        <div class="alert">
+            <div class="alert-top">
+                <span>提示</span>
+            </div>
+            <div class="alert-bottom">
+                <p>是否发布问卷？</p>
+                <p>(问卷截止日期到<span id="limitedDate">未选择时间</span>)</p>
+                <div>
+                    <input type="button" value="确定" onClick="myQuestionaire.edit.post(event)" />
+                    <input type="button" value="取消" onClick="myQuestionaire.edit.confirmPost(event)" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="script/Questionaire.js"></script>
+    
+    <script>
+    var options = {
+        'calendarClass': 'calendar',
+        'inputClass': 'input',
+        'cellClass': 'cell',
+        'uesdClass': 'used',
+    }
+    new Calendar(options);
+    </script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			/*公共部分
+			 * 导航栏
+			 */
+			$(".headerpage").load("header.html");
+		});
+	</script>
+</body>
+
+</html>

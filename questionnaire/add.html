@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>增加问卷</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<style>             
+    .add {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        font-size: 24px;
+       font-weight: bold;
+       width: 150px;
+       height: 35px;
+       margin: auto;
+       background-color: #FA7C4D;
+       color: #fff;
+       padding: 10px 20px;
+    }
+
+    .add-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+		.add2{
+			width: 300px;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<header class="headerpage header"></header>
+	<div class="ad">
+		<section class="add add2">
+		    <div class="add-icon"><img src="images/新增.png" alt="add"/></div>
+		    <a href="edit.html">新建问卷</a>
+	</section>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			/*公共部分
+			 * 导航栏
+			 */
+			$(".headerpage").load("header.html");
+		});
+	</script>
+</body>
+</html>
